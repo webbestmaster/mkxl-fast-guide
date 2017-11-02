@@ -7,7 +7,7 @@
     "webpack": "webpack",
     "build-nix": "NODE_ENV=production webpack",
     "build-win": "SET NODE_ENV=production& rmdir /s /q dist && webpack",
-    "start": "webpack-dev-server --content-base dist/ --host 0.0.0.0 --progress --no-inline",
+    "start": "webpack-dev-server --content-base dist/ --host 0.0.0.0 --port 2124 --progress --no-inline",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",
     "flow": "flow",

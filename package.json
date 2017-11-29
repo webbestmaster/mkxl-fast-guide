@@ -6,7 +6,8 @@
   "scripts": {
     "webpack": "webpack",
     "build-nix": "NODE_ENV=production webpack",
-    "build-win": "SET NODE_ENV=production& rmdir /s /q dist && webpack",
+    "__build-win": "SET NODE_ENV=production& rmdir /s /q dist && webpack",
+    "build-win": "SET NODE_ENV=production& webpack",
     "start": "webpack-dev-server --content-base dist/ --host 0.0.0.0 --port 2124 --progress --no-inline",
     "lint": "eslint .",
     "lint-fix": "eslint . --fix",

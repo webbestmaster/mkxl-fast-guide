@@ -61,7 +61,8 @@ const webpackConfig = {
         main: ['./js/index.js']
     },
     output: {
-        path: path.join(CWD, 'dist'),
+        path: path.join(CWD, './dist/assets/'),
+        publicPath: 'assets/',
         filename: '[name].js'
     },
 
@@ -121,7 +122,8 @@ const webpackConfig = {
         new webpack.NoEmitOnErrorsPlugin(),
         new webpack.DefinePlugin(definePluginParams),
         new HtmlWebpackPlugin({
-            template: 'index.html'
+            template: 'index.html',
+            filename: '/../index.html'
         }),
         new ExtractTextPlugin({
             filename: 'style.css',
@@ -135,6 +137,7 @@ const webpackConfig = {
 
 };
 
+/*
 if (IS_PRODUCTION) {
     webpackConfig.plugins.push(
         new webpack.optimize.UglifyJsPlugin({
@@ -145,5 +148,6 @@ if (IS_PRODUCTION) {
         })
     );
 }
+*/
 
 module.exports = webpackConfig;
